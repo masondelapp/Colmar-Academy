@@ -10,14 +10,16 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="Resources/CSS/styles.css">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     </head>
     <header class="flex.container">
         <img id="nav-logo" src="Resources/images/ic-logo.svg" alt="">
+        <h1>COLMAR</h1><h1>Academy</h1>
         <nav>
            <div class="flex-container nav-buttons-mobile">
-                <a href=""><img src="Resources/images/ic-on-campus.svg" alt="On Campus"></a>
-                <a href=""><img src="Resources/images/ic-online.svg" alt="Online"></a>
-                <a href=""><img src="Resources/images/ic-login.svg" alt="Login"></a>
+                <a class="mobilebutton" href=""><img src="Resources/images/ic-on-campus.svg" alt="On Campus"></a>
+                <a class="mobilebutton"href=""><img src="Resources/images/ic-online.svg" alt="Online"></a>
+                <a class="mobilebutton" href=""><img src="Resources/images/ic-login.svg" alt="Login"></a>
             </div>
             <div class="flex-container nav-buttons">
                 <a href="#">On Campus</a>
@@ -29,10 +31,62 @@
     </header>
         <div class="banner">
             <img src="Resources/images/banner.jpg" alt="Students studying at a table">
-            <h1>Learn something new everyday</h1>
-            <h4>Lorem ipsum dolar sit amet, consectetur adipiscing elit.</h4>
-            <button>Start Here</button>
+                <div class="flex-container banner-text">
+                    <h1>Learn something new everyday</h1>
+                    <h4>Lorem ipsum dolar sit amet, consectetur adipiscing elit.</h4>
+                    <button>Start here</button>
+                </div>    
         </div>
+    <!-- Sub-Banner-->    
+    <div id="sub-banner">
+        <div class="flex-container">
+            <img id="sub-banner-img" src="Resources/images/information-main.jpg" alt="">
+                <div id="sub-banner-text">    
+                    <h2>It doesn't hurt to keep practicing</h2>
+                    <span>"Curbitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet efficitur dolar consequat, tristique ligula."</span>
+                    <p>Emanuel, Sr Strategist at Hiring.com</p>
+                </div>
+        </div> 
+    </div>
+    <!-- Sub Banner Sidebar -->
+              
+    <div class="sidebar-all">
+        <div class="sidebar-section">
+            <img src="Resources/images/information-orientation.jpg" alt=""> 
+                <div class=sidebar-text>  
+                    <h3>Orientation date</h3>
+                    <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
+                    <a href="">Read more</a>
+                </div>      
+        </div>
+        <div class="sidebar-section">
+            <img src="Resources/images/information-campus.jpg" alt=""> 
+                <div class=sidebar-text>     
+                    <h3>Our campus</h3>
+                    <p>Find which campus is close to you</p>
+                    <a href="">Read more</a>
+                </div>    
+        </div>
+        <div class="sidebar-section">
+            <img src="Resources/images/information-guest-lecture.jpg" alt="">
+                <div class=sidebar-text> 
+                    <h3>Our guest lecture</h3>
+                    <p>Join a keynote with Oliver Sack abou music in medical treatment</p>
+                    <a href="">Read more</a>
+                </div>    
+        </div>  
+        <div class="sidebar-mobile">
+             <div>
+                <img src="Resources/images/information-orientation-mobile.jpg" alt="">
+            </div>
+            <div>
+                <img src="Resources/images/information-campus-mobile.jpg" alt="">
+            </div>
+            <div>
+                <img src="Resources/images/information-guest-lecture-mobile.jpg" alt="">
+            </div>
+        </div>  
+    </div>    
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>

@@ -60,8 +60,9 @@
 body {
     margin: 0;
     padding: 0;
-    width: 1200px;
+    width: auto;
     font-family: Montserrat;
+    box-sizing: border-box;
 }
 
 .flex-container {
@@ -70,36 +71,196 @@ body {
     flex-wrap: wrap;
 }
 
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+    font-size: 1em;
+}
+
+
 /* Navigation */
 
-nav {
-    display: inline-flex;
+header {
     width: 100%;
-    height: 60px;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
 }
 
 #nav-logo {
-    height: 50px;
-    width: 50x;
+    height: 70px;
+    width: 70x;
+    padding-left: 10px;
+ 
+}
+
+nav {
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons {
+    margin-right: 24px; 
+}
+.nav-buttons a{
+    display: flex;
     margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: grey;
+    
 
 }
 
-.flex-container nav-buttons {
-    display: flex;
-    margin: 12px 12px 0 12px;
-    text-align: right;
+.nav-buttons-mobile{
+    margin-right: 24px;
+    padding: 0 40px;
+    display: none;
+    text-align: center;
     text-decoration: none;
     color: grey;
 
-}
-
-.flex-container nav-buttons-mobile{
-    display: none;
 
 }
+ 
+.mobilebutton {
+    margin: 30px;
+    
+}
 
-
+a:hover {
+    color: black;
+}
+:active {
+    color: black;
+}
 
 /* Banner */ 
 
+.banner {
+    padding-top: 80px;
+    display: flex;
+    background-color: #d3d3d3;
+    padding: 112px 24px 32px;
+    width: 100%;
+}
+
+.banner img {
+    width: 60%;
+    margin-right: 24px;
+
+}
+
+.banner-text {
+    color: rgb(75, 74, 74);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.banner-text button {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1em;
+    color: white;
+    height: 40px;
+    width: 275px;
+    border: none;
+    font-family: Montserrat;
+    margin-top: 20px;
+    padding: 8px 0;
+    background-color:  rgb(75, 74, 74);
+    
+}
+
+/* Sub-Banner */
+
+#sub-banner {
+    padding-top: 32px;
+    display: flex;
+
+    border: 1px solid red;
+    align-items: 
+}
+
+#sub-banner-img {
+    display: block;
+    width: 60%;
+    max-height: 300px;
+    padding: 32px 24px;
+}
+
+#sub-banner-text{
+    float: left;
+
+    margin-top: 32px;
+    color: rgb(75, 74, 74);
+    width: 60%;
+}
+
+/* Sidebar */
+
+.sidebar-all {
+    float: right;
+    border: solid 1px purple;
+    display: block;
+    flex-direction: column;
+    width: 1000px;
+    height: 600px;
+}
+.sidebar-section {
+    border: solid 1px gold;
+    width: 40%;
+}
+
+
+.sidebar-all img {
+    flex-direction: column;
+    display: flex;
+    float: left;
+    margin: 16px;
+}
+
+.sidebar-mobile{
+    display: none;
+}
+
+.siderbar-text {
+    display: flex;
+    width: 500px;
+}
+
+
+
+
+
+/* Queries */
+
+@media only screen and (max-width: 768px) {
+    .nav-buttons {
+        display: none;
+    }
+
+    .nav-buttons-mobile {
+        display: flex;
+       
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .nav-buttons-mobile {
+        display: none;
+    }
+}
