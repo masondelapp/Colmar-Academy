@@ -57,12 +57,23 @@
 
 /* Global Styles */
 
-body {
+*{
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
     margin: 0;
     padding: 0;
-    width: auto;
-    font-family: Montserrat;
+    height: auto;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
     box-sizing: border-box;
+    width: 1050px;
+    height: auto;
+    min-width: 500px;
+    
 }
 
 .flex-container {
@@ -71,16 +82,35 @@ body {
     flex-wrap: wrap;
 }
 
-h1 {
+h1 { 
+    font-size: 2rem;
+    font-weight: 700;
 
 }
 
 h2 {
+    font-size: 1.5em;
+    font-weight: 700;
 
 }
 
 h3 {
     font-size: 1em;
+    color: rgb(75, 74, 74);
+}
+
+h4 {
+    font-size: .8em;
+    font-weight: 300;
+}
+
+p {
+    font-size: .5em;
+    color: rgb(75, 74, 74);
+}
+
+span {
+    font-size: .8em;
 }
 
 
@@ -88,30 +118,63 @@ h3 {
 
 header {
     width: 100%;
-    height: 80px;
+    margin: 0 auto;
+    max-width: 1050px;
+    min-width: 450px;
     position: fixed;
-    display: flex;
+    height: 64px;
+    display: inline-flex;
     background-color: white;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     z-index: 1;
 }
 
+#name {
+    width: 45%;
+    display: inline-flex;
+}
+
+header h1 {
+    margin-top: 5px;
+    display: inline-flex;
+    color: rgb(75, 74, 74);
+    font-weight: 300;
+    font-size: 32px;
+    text-transform: uppercase;
+    height: 60px;
+    position: absolute;
+    margin-left: 74px;
+    
+}
+
+header strong {
+    font-weight: 800;
+    font-size: 40px;
+}
+header span{
+    margin-top: 8px;
+    font-size: 32px;
+}
+
 #nav-logo {
+    position: absolute;
     height: 70px;
     width: 70x;
     padding-left: 10px;
+    margin-right: 0;
+    padding-right: 0px;
  
 }
 
 nav {
-    margin: 0 30px;
+    margin: auto;
     display: flex;
-    align-items: center;
+    position: relative;
 }
 
 .nav-buttons {
-    margin-right: 24px; 
+    margin: 0 24px; 
 }
 .nav-buttons a{
     display: flex;
@@ -124,18 +187,21 @@ nav {
 }
 
 .nav-buttons-mobile{
-    margin-right: 24px;
     padding: 0 40px;
     display: none;
     text-align: center;
     text-decoration: none;
     color: grey;
 
+}
 
+.nav-buttons-mobile {
+    width: 350px;
 }
  
 .mobilebutton {
-    margin: 30px;
+    justify-content: space-evenly;
+    padding: 0 36px;
     
 }
 
@@ -149,24 +215,32 @@ a:hover {
 /* Banner */ 
 
 .banner {
+    
     padding-top: 80px;
     display: flex;
-    background-color: #d3d3d3;
+    background-color: #e9ebed;
     padding: 112px 24px 32px;
-    width: 100%;
+    position: relative;
 }
 
 .banner img {
     width: 60%;
-    margin-right: 24px;
 
 }
+
 
 .banner-text {
     color: rgb(75, 74, 74);
     display: flex;
+    margin-left: 24px;
     flex-direction: column;
     text-align: left;
+}
+
+.banner-text h4 {
+    margin-left: 0;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 .banner-text button {
@@ -177,72 +251,295 @@ a:hover {
     height: 40px;
     width: 275px;
     border: none;
-    font-family: Montserrat;
+    font-family: "Montserrat";
     margin-top: 20px;
     padding: 8px 0;
     background-color:  rgb(75, 74, 74);
     
 }
 
+
+/* Section Two */
+
+.section-2{
+    display: flex;
+}
+
 /* Sub-Banner */
 
-#sub-banner {
-    padding-top: 32px;
+/* #entire-sub-banner {
+    width: 1100px;
+    padding: 0;
+    border: 1px double aqua;
+    position: relative;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+*/
 
-    border: 1px solid red;
-    align-items: 
+#sub-banner {
+    margin: 0 0 0 0;
+    padding: 32px 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
 }
 
 #sub-banner-img {
     display: block;
-    width: 60%;
-    max-height: 300px;
-    padding: 32px 24px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
 }
 
 #sub-banner-text{
-    float: left;
-
-    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
     color: rgb(75, 74, 74);
-    width: 60%;
+    margin: 32px 24px 0 0;
+    width: 90%;
+}
+
+#sub-banner-text h2 {
+    margin-bottom: 24px;
+}
+
+#sub-banner-text span {
+    padding: 0 0 24px 0;
+
+}
+#sub-banner-text p {
+    margin-bottom: 32px;
+    margin-top: 24px;
 }
 
 /* Sidebar */
 
 .sidebar-all {
-    float: right;
-    border: solid 1px purple;
     display: block;
+    margin: 32px 0 0 0;
     flex-direction: column;
-    width: 1000px;
-    height: 600px;
+    border-left: 1px solid #e9ebed;
+    width: 40%;
+
 }
 .sidebar-section {
-    border: solid 1px gold;
-    width: 40%;
+    display: flex;
+    width: 100%;
+
 }
 
-
-.sidebar-all img {
-    flex-direction: column;
-    display: flex;
+.sidebar-section img {
     float: left;
-    margin: 16px;
+    width: 35%;
+    height: auto;
+    margin: 0 16px 16px;
+    position: relative;
+}
+.sidebar-section:hover{
+    background-color: #d3d3d3;
+    transition: background-color 400ms linear 50ms; 
 }
 
 .sidebar-mobile{
     display: none;
 }
 
-.siderbar-text {
-    display: flex;
-    width: 500px;
+.sidebar-text {
+    display: inline-flex;
+    line-height: .85em;
+    width: 65%;
+    height: 80px;
+    flex-direction: column;
+    color: rgb(75, 74, 74);
+    margin-top: 10%;
 }
 
+.sidebar-text h3 {
+    font-size: 1.2em;
+    padding: 0;
+    margin: 0 0 16px;
+    font-weight: 600;
+    
+}
+.sidebar-text h4 {
+    margin: 0 0 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+
+.sidebar-text a{
+    color: cornflowerblue;
+    text-decoration: none;
+    margin: 16px 0 0;
+    padding: 0;
+    font-size: .9em;
+}
+
+/* Section 3 */
+
+#section-3 {
+    background-color: #e9ebed;
+    width: 100%;
+}
+
+#courses {
+    margin: 0 72px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 32px;
+    
 
 
+}
+
+#section-3 h2 {
+    padding: 32px;
+    text-align: center;
+    color: rgb(75, 74, 74);
+
+}
+
+.course {
+    margin: 0 0 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+    background-color: white;
+    width: 275px;
+    height: auto;
+}
+.course:hover {
+    background-color: rgb(209, 209, 209);
+}
+
+.course img {
+    display: block;
+    width: 275px;
+    height: auto;
+}
+
+.course h3 {
+    font-weight: 600;
+}
+
+.course h3, h4, p {
+    margin: 16px 16px 8px 16px;
+    display: flex;
+    color: rgb(75, 74, 74);
+
+}
+
+.course h4, p {
+    color: rgb(112, 112, 112);
+
+
+}
+
+.course p {
+    font-size: .75em;
+    margin-bottom: 16px;
+}
+
+/* Section 4 */
+
+#section-4 h2{
+    text-align: center;
+    margin: 32px;
+    color: rgb(75, 74, 74);
+}
+
+#contentbox {
+    display: flex;
+}
+
+.content-video {
+    width: 60%;
+    margin: 0 24px;
+
+}
+
+.content-video video {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.content-video h3 {
+    font-weight: 600;
+    margin: 24px 0 0 0;
+    font-size: 1.1em;
+}
+
+.content-video p {
+    width: 90%;
+    margin: 16px 0 32px;
+    font-size: .8em;
+
+
+}
+
+#content-sidebar {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 40%;
+
+}
+.content {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.content:hover {
+    background-color: #d3d3d3;
+
+}
+.content img {
+    margin: 16px;
+    width: 35%;
+    height: auto;
+}
+.content-text {
+    width: 65%;
+    margin-top: 12%;
+
+}
+
+.content-text h3 {
+    font-weight: 600;
+}
+
+.content-text p {
+    margin-left: 0;
+    margin-top: 16px;
+    font-size: .75em;
+    color: rgb(112, 112, 112);
+}
+
+/* Footer */
+
+footer {
+    display: inline;
+    
+}
+
+footer p{
+    margin: 16px 24px 48px;
+    float: left;
+
+}
+footer a { 
+    float: right;
+    margin: 16px 24px 0 0;
+    text-decoration: none;
+    color: rgb(75, 74, 74);
+    font-size: .75em;
+}
 
 
 /* Queries */
@@ -251,11 +548,175 @@ a:hover {
     .nav-buttons {
         display: none;
     }
-
+    
     .nav-buttons-mobile {
-        display: flex;
+        display: inline;
+        
        
     }
+
+
+    body {
+        width: 480px;
+        margin: 0 auto 32px;
+        padding: 0;
+    }
+
+  
+    header h1 {
+        display: none;
+        transform: scaleY(1);
+    }
+
+    #nav-logo {
+        height: 50px;
+        width: 50px;
+        margin-top: 8px;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+        padding: 112px 0 32px;
+    }
+
+    .banner img {
+        width: 100%;
+        margin: 0 0 32px 0;
+
+    }
+
+    button {
+        margin-top: 16px;
+        margin: auto;
+        margin-left: 85px;
+        
+
+    }
+
+    .section-2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    #sub-banner {
+        display: none;
+    }
+    .sidebar-all {
+        margin: 0;
+        border: none;
+        padding-bottom: 16px;
+        width: 100%;
+
+    }
+    .sidebar-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 0;
+    }
+
+    .sidebar-section img {
+        display: none;
+        box-sizing: border-box;
+        width: 93.5%;
+        float: none;
+        margin-top: 16px;
+    }
+
+    .sidebar-section .sidebar-mobile {
+        display: flex;
+
+    }
+    .sidebar-mobile {
+        display: flex;
+
+    }
+
+    .sidebar-mobile {
+        display: flex;
+        margin: 0;
+    }
+
+    .sidebar-text {
+        margin: 16px 0 0 16px;
+        padding-bottom: 16px;
+    }
+
+    #section-3 {
+        background-color: white;
+        border-top: 1px solid rgb(209, 209, 209);
+    }
+
+    #section-3 h2 {
+        font-size: 2em;
+        margin: 16px;
+    }
+    #courses {
+        background-color: white;
+        width: 100%;
+        float: left;
+        margin: 0 16px 32px;
+    }
+    .course {
+        background-color: rgb(209, 209, 209);
+        width: 100%;
+        margin: 8px 32px 0 0;
+        
+    }
+
+    .course h3 {
+        margin: 16px 16px 16px 16px;
+        padding: 8px 0;
+        font-size: 1.2em;
+    }
+    .course img, h4, p {
+        display: none;
+    }
+
+    #section-4 {
+        margin-bottom: 24px;
+    }
+
+    #section-4 h2 {
+        font-size: 2em;
+        
+    }
+    .content-video {
+        width: 100%;
+        margin: 0;
+    }
+    .content-video h3 {
+        display: none;
+    }
+
+    
+    #content-sidebar {
+        display: none;
+    }    
+    
+    footer {
+        width: 100%;
+        margin: 16px 0;
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer a { 
+        display: none;
+        
+    }
+
+    footer p {
+        display: flex;
+        margin: 16px auto;
+        font-size: .8em;
+
+
+
+    }
+
 
 }
 
